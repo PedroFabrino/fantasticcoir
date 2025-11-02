@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "home": "início",
+    "characters": "personagens",
+    "about": "sobre",
+    "logo": "Fantástico & Juir"
+  },
+  "home": {
+    "title": "Fantástico & Juir",
+    "subtitle": "Bem-vindos ao universo mágico",
+    "description": "Onde a imaginação ganha vida e os sonhos se tornam realidade",
+    "exhibition": "Exibição",
+    "event1_name": "Espaço Renato Russo",
+    "event1_dates": "03/11 à 20/12/2025",
+    "event2_name": "Casa do Cantador",
+    "event2_dates": "01/05 à 06/04/2026"
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "content": "<p>Bem-vindos ao universo mágico do <strong>Fantástico & Juir</strong>, onde a imaginação ganha vida e os sonhos se tornam realidade. Nossa jornada começou com a paixão por contar histórias que transportam pessoas para mundos extraordinários, repletos de magia, aventura e encantamento.</p><p>Cada personagem em nossa coleção foi cuidadosamente desenvolvido para representar arquétipos universais que ressoam com diferentes aspectos da experiência humana. Desde os corajosos piratas que navegam pelos sete mares até as elegantes fadas que dançam sob o luar, cada história oferece uma perspectiva única sobre coragem, amor, descoberta e transformação.</p><p>Nossa missão é criar experiências imersivas que não apenas entretenham, mas também inspirem. Utilizamos uma combinação de elementos visuais deslumbrantes, narrativas envolventes e trilhas sonoras atmosféricas para criar um ambiente onde cada visitante pode encontrar sua <em>própria aventura mágica</em>.</p><p>O projeto <strong>Fantástico & Juir</strong> é mais do que uma simples exibição - é um convite para redescobrir a magia que existe dentro de cada um de nós. Seja explorando as profundezas misteriosas do mundo dos vampiros ou dançando com as fadas em florestas encantadas, cada jornada é uma oportunidade de conexão com nossa própria capacidade de sonhar e imaginar.</p><p>Convidamos você a mergulhar neste universo fantástico e descobrir qual personagem ressoa mais profundamente com sua alma. Deixe-se levar pela magia e permita que cada história toque seu coração de uma forma única e especial.</p><p>Bem-vindos ao <strong>Fantástico & Juir</strong> - onde cada momento é uma nova possibilidade de encantamento.</p>"
+  },
+  "characters": {
+    "names": {
+      "pirata-sereia": "Pirata & Sereia",
+      "princese": "Princese",
+      "fades": "Fades",
+      "satiro-fauno": "Sátiro & Fauno",
+      "vampiros": "Vampiros",
+      "vampiras": "Vampiras",
+      "bruxes": "Bruxes"
+    },
+    "content": {
+      "pirata-sereia": "<p>Aventure-se pelos <strong>sete mares</strong> com nossos corajosos piratas em busca de tesouros perdidos. Nas profundezas azuis, sereias encantadoras guardam segredos ancestrais e protegem as riquezas do oceano.</p><p>Esta jornada marítima combina a audácia dos navegadores com a <em>magia aquática</em> das criaturas do mar. Entre tempestades e calmarias, descobriremos histórias de coragem, lealdade e a eterna busca pela liberdade nos horizontes infinitos.</p><p>Prepare-se para içar as velas e mergulhar em uma aventura onde o <strong>perigo e a beleza</strong> se encontram nas ondas do destino.</p>",
+      "princese": "<p>Entre nos <strong>reinos encantados</strong> onde a nobreza se une à magia. Nossas princesas não são apenas figuras de conto de fadas, mas <em>líderes corajosas</em> que enfrentam desafios com sabedoria e determinação.</p><p>Cada princesa carrega consigo a responsabilidade de proteger seu povo, governar com justiça e manter viva a esperança mesmo nos momentos mais sombrios. Suas coroas brilham não apenas com joias preciosas, mas com a <strong>luz da bondade</strong> e da força interior.</p><p>Descubra histórias de amor verdadeiro, sacrifício heroico e a magia que nasce quando o coração puro se une ao <em>poder da realeza</em>.</p>",
+      "fades": "<p>Adentre a <strong>floresta mágica</strong> onde as fadas dançam entre raios de sol e gotas de orvalho. Estas criaturas etéreas são as guardiãs da natureza, protegendo cada flor, cada árvore e cada ser vivo com sua <em>magia ancestral</em>.</p><p>Com suas asas iridescentes e varinhas cintilantes, as fadas tecem encantamentos que mantêm o equilíbrio entre o mundo natural e o sobrenatural. Elas sussurram segredos aos ventos, conversam com os animais e fazem as plantas florescerem com apenas um toque.</p><p>Permita-se ser envolvido pela delicadeza e poder dessas criaturas mágicas que transformam o ordinário em extraordinário com sua <strong>presença luminosa</strong>.</p>",
+      "satiro-fauno": "<p>Nas profundezas das <strong>florestas ancestrais</strong> habitam os sátiros e faunos, criaturas místicas que são meio homem, meio bode. Guardiões da natureza selvagem, eles tocam suas flautas de pã ao luar, criando melodias que ecoam pelos vales e despertam a <em>magia adormecida</em>.</p><p>Estes seres antigos conhecem cada segredo da floresta, cada trilha oculta e cada fonte cristalina. Com seus cascos firmes e chifres orgulhosos, eles saltam pelos rochedos e dançam em clareiras iluminadas pela lua, celebrando a vida em sua forma mais <strong>pura e selvagem</strong>.</p><p>Junte-se a eles em uma jornada pela sabedoria ancestral da natureza, onde cada folha tem uma história e cada vento carrega uma <em>canção</em>.</p>",
+      "vampiros": "<p>Quando a <strong>lua cheia</strong> ilumina os castelos góticos e as névoas envolvem as antigas mansões, os vampiros emergem das sombras. Criaturas da eternidade, eles carregam consigo séculos de histórias, amores perdidos e <em>segredos sombrios</em>.</p><p>Elegantes e misteriosos, os vampiros não são apenas predadores da noite, mas guardiões de uma sabedoria ancestral que transcende o tempo mortal. Com seus olhos penetrantes e presença magnética, eles navegam entre dois mundos - o dos <strong>vivos e o dos mortos</strong>.</p><p>Adentre este reino de sombras e descobra a beleza melancólica da imortalidade, onde cada noite traz novas possibilidades e cada amanhecer é uma <em>despedida temporária</em>.</p>",
+      "vampiras": "<p>Nas sombras da <strong>lua minguante</strong>, as vampiras emergem com sua beleza fatal e poder sedutor. Criaturas de elegância mortal, elas dominam tanto a arte da sedução quanto os segredos da eternidade, caminhando entre mundos com <em>graça predatória</em>.</p><p>Com seus olhos hipnóticos e presença magnética, as vampiras tecem redes de fascínio que capturam corações e almas. Elas são mestras da manipulação sutil, usando sua <strong>beleza imortal</strong> como arma e escudo, navegando pelos séculos com sabedoria acumulada.</p><p>Adentre o reino das vampiras e descubra o poder feminino em sua forma mais dark e sedutora, onde cada sussurro carrega promessas de <em>prazer e perigo</em>.</p>",
+      "bruxes": "<p>Nas <strong>torres mais altas</strong> e nas cavernas mais profundas, as bruxas praticam a arte ancestral da magia. Mestras dos elementos e guardiãs de conhecimentos proibidos, elas tecem encantamentos que podem curar ou amaldiçoar, <em>criar ou destruir</em>.</p><p>Com seus caldeirões borbulhantes e cristais luminosos, as bruxas canalizam as energias primordiais do universo. Cada poção é uma obra de arte alquímica, cada feitiço uma dança entre o possível e o impossível. Elas conhecem o poder das ervas, o segredo das estrelas e a <strong>linguagem oculta da natureza</strong>.</p><p>Aproxime-se com respeito e curiosidade, pois no mundo das bruxas, a sabedoria e o poder andam de mãos dadas, e cada ritual é uma porta para <em>dimensões inexploradas da realidade</em>.</p>"
+    }
+  },
+  "common": {
+    "audioNotSupported": "Seu navegador não suporta o elemento de áudio.",
+    "logoAlt": "Logo Fantástico & Juir",
+    "decorationAlt": "Elemento Decorativo"
+  }
+}
