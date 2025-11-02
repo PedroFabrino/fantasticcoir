@@ -20,31 +20,31 @@ onUnmounted(() => {
 // Character data configuration
 const characterData = {
   'pirata-sereia': {
-    svgSrc: '/src/assets/characters/pirata e sereia.svg',
+    svgSrc: '@/assets/characters/pirata e sereia.svg',
     audioSrc: '/audio/pirata-sereia-theme.mp3',
   },
   princese: {
-    svgSrc: '/src/assets/characters/princese.svg',
+    svgSrc: '@/assets/characters/princese.svg',
     audioSrc: '/audio/princesas-theme.mp3',
   },
   fades: {
-    svgSrc: '/src/assets/characters/fades.svg',
+    svgSrc: '@/assets/characters/fades.svg',
     audioSrc: '/audio/fadas-theme.mp3',
   },
   'satiro-fauno': {
-    svgSrc: '/src/assets/characters/sátiro e fauno.svg',
+    svgSrc: '@/assets/characters/sátiro e fauno.svg',
     audioSrc: '/audio/satiro-fauno-theme.mp3',
   },
   vampiros: {
-    svgSrc: '/src/assets/characters/vampiros.svg',
+    svgSrc: '@/assets/characters/vampiros.svg',
     audioSrc: '/audio/vampiros-theme.mp3',
   },
   vampiras: {
-    svgSrc: '/src/assets/characters/vampiras.svg',
+    svgSrc: '@/assets/characters/vampiras.svg',
     audioSrc: '/audio/vampiras-theme.mp3',
   },
   bruxes: {
-    svgSrc: '/src/assets/characters/bruxes.svg',
+    svgSrc: '@/assets/characters/bruxes.svg',
     audioSrc: '/audio/bruxas-theme.mp3',
   },
 }
