@@ -17,34 +17,43 @@ onUnmounted(() => {
   document.body.classList.remove('character-page-mobile')
 })
 
+// Import SVG files using Vite's explicit import syntax
+import pirataSereiaSvg from '@/assets/pirata e sereia.svg'
+import princeseSvg from '@/assets/princese.svg'
+import fadesSvg from '@/assets/fades.svg'
+import satiroFaunoSvg from '@/assets/sátiro e fauno.svg'
+import vampirosSvg from '@/assets/vampiros.svg'
+import vampirasSvg from '@/assets/vampiras.svg'
+import bruxesSvg from '@/assets/bruxes.svg'
+
 // Character data configuration
 const characterData = {
   'pirata-sereia': {
-    svgSrc: '@/assets/characters/pirata e sereia.svg',
+    svgSrc: pirataSereiaSvg,
     audioSrc: '/audio/pirata-sereia-theme.mp3',
   },
   princese: {
-    svgSrc: '@/assets/characters/princese.svg',
+    svgSrc: princeseSvg,
     audioSrc: '/audio/princesas-theme.mp3',
   },
   fades: {
-    svgSrc: '@/assets/characters/fades.svg',
+    svgSrc: fadesSvg,
     audioSrc: '/audio/fadas-theme.mp3',
   },
   'satiro-fauno': {
-    svgSrc: '@/assets/characters/sátiro e fauno.svg',
+    svgSrc: satiroFaunoSvg,
     audioSrc: '/audio/satiro-fauno-theme.mp3',
   },
   vampiros: {
-    svgSrc: '@/assets/characters/vampiros.svg',
+    svgSrc: vampirosSvg,
     audioSrc: '/audio/vampiros-theme.mp3',
   },
   vampiras: {
-    svgSrc: '@/assets/characters/vampiras.svg',
+    svgSrc: vampirasSvg,
     audioSrc: '/audio/vampiras-theme.mp3',
   },
   bruxes: {
-    svgSrc: '@/assets/characters/bruxes.svg',
+    svgSrc: bruxesSvg,
     audioSrc: '/audio/bruxas-theme.mp3',
   },
 }
