@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -9,6 +9,15 @@ onMounted(() => {
   setTimeout(() => {
     contentVisible.value = true
   }, 300)
+
+  // Add sobre page class to body on mobile
+  if (window.innerWidth <= 768) {
+    document.body.classList.add('sobre-page-mobile')
+  }
+})
+
+onUnmounted(() => {
+  document.body.classList.remove('sobre-page-mobile')
 })
 </script>
 
@@ -99,8 +108,20 @@ onMounted(() => {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  :global(body.sobre-page-mobile),
+  :global(body.sobre-page-mobile #app) {
+    background: white !important;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
   .sobre-view {
     padding: 1.5rem;
+    background: white !important;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .main-logo {

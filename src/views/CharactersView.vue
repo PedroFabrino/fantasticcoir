@@ -1,10 +1,21 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const route = useRoute()
+
+// Add character page class to body on mobile
+onMounted(() => {
+  if (window.innerWidth <= 768) {
+    document.body.classList.add('character-page-mobile')
+  }
+})
+
+onUnmounted(() => {
+  document.body.classList.remove('character-page-mobile')
+})
 
 // Character data configuration
 const characterData = {
@@ -160,11 +171,25 @@ const currentCharacter = computed(() => {
   z-index: 10;
 }
 
-/* Responsive Design */
+/* Mobile Responsive */
 @media (max-width: 768px) {
+  :global(body.character-page-mobile),
+  :global(body.character-page-mobile #app) {
+    background: #b889af !important;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
   .character-view {
     padding: 1.5rem;
     gap: 1.5rem;
+    background: #b889af !important;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-height: 100vh;
   }
 
   .character-title {
