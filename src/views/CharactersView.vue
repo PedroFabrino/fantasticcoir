@@ -139,7 +139,7 @@ const currentCharacter = computed(() => {
 
 .character-title {
   font-size: 2.5rem;
-  color: white;
+  color: #fff5e9;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: bold;
@@ -151,7 +151,7 @@ const currentCharacter = computed(() => {
 
 .character-text p {
   font-size: 1.1rem;
-  color: white;
+  color: #fff5e9;
   margin-bottom: 1.5rem;
   text-align: justify;
   max-width: 60%;

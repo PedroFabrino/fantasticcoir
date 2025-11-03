@@ -65,7 +65,7 @@ onMounted(() => {
 
 <style scoped>
 .home-view {
-  background: white;
+  background: #fff5e9;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -104,7 +104,7 @@ onMounted(() => {
 
 .exhibition-section {
   margin-top: 2rem;
-  background-color: white;
+  background-color: #fff5e9;
 }
 
 .exhibition-decorations {
@@ -249,7 +249,7 @@ onMounted(() => {
 
   .exhibition-title {
     font-size: 32px;
-    color: white;
+    color: #fff5e9;
   }
 
   .mobile-event-details {
@@ -274,22 +274,22 @@ onMounted(() => {
 
   .event-location {
     text-align: left;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid FFF5E9;
     padding: 1rem 0;
     margin: 0.5rem 0;
   }
 
   .event-location:first-child {
-    border-top: 1px solid white;
+    border-top: 1px solid FFF5E9;
   }
 
   .event-location h3 {
-    color: white;
+    color: #fff5e9;
     text-align: left;
   }
 
   .event-dates {
-    color: white;
+    color: #fff5e9;
     text-align: left;
   }
 
@@ -339,7 +339,7 @@ onMounted(() => {
 
   .exhibition-title {
     font-size: 28px;
-    color: white;
+    color: #fff5e9;
   }
 
   .mobile-event-details {
@@ -356,12 +356,12 @@ onMounted(() => {
 
   .event-location h3 {
     font-size: 1rem;
-    color: white;
+    color: #fff5e9;
   }
 
   .event-dates {
     font-size: 0.85rem;
-    color: white;
+    color: #fff5e9;
   }
 }
 

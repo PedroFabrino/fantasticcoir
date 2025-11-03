@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <style scoped>
 .sobre-view {
-  background: white;
+  background: #fff5e9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   :global(body.sobre-page-mobile),
   :global(body.sobre-page-mobile #app) {
-    background: white !important;
+    background: #fff5e9 !important;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -118,7 +118,7 @@ onUnmounted(() => {
 
   .sobre-view {
     padding: 1.5rem;
-    background: white !important;
+    background: #fff5e9 !important;
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;

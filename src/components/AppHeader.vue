@@ -251,7 +251,7 @@ const closeDropdown = () => {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: white;
+  background-color: #fff5e9;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   border-bottom: 2px solid #284e42;
 }
@@ -288,7 +288,7 @@ const closeDropdown = () => {
 /* Logo */
 .logo {
   text-decoration: none;
-  color: white;
+  color: #fff5e9;
 }
 
 .logo-text {
@@ -359,7 +359,7 @@ const closeDropdown = () => {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: #fff5e9;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   list-style: none;
@@ -374,7 +374,7 @@ const closeDropdown = () => {
 
 /* Ensure dropdown is visible on home page */
 .desktop-header.home-header .dropdown-menu {
-  background-color: white;
+  background-color: #fff5e9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -518,7 +518,7 @@ const closeDropdown = () => {
 .mobile-close-btn {
   background: none;
   border: none;
-  color: white;
+  color: #fff5e9;
   font-size: 2rem;
   cursor: pointer;
   padding: 0;
@@ -548,7 +548,7 @@ const closeDropdown = () => {
 .menu-separator {
   width: 80%;
   height: 1px;
-  background-color: white;
+  background-color: #fff5e9;
   margin: 0.75rem 0;
   opacity: 1;
 }
@@ -561,7 +561,7 @@ const closeDropdown = () => {
 
 .mobile-nav-link {
   display: block;
-  color: white;
+  color: #fff5e9;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 400;
@@ -605,15 +605,15 @@ const closeDropdown = () => {
   }
 
   .desktop-header.home-header .nav-link {
-    color: white;
+    color: #fff5e9;
   }
 
   .desktop-header.home-header .menu-text {
-    color: white;
+    color: #fff5e9;
   }
 
   .desktop-header.home-header .hamburger-line {
-    background-color: white;
+    background-color: #fff5e9;
   }
 
   /* Character page mobile styling - purple header with white elements */
@@ -623,20 +623,20 @@ const closeDropdown = () => {
   }
 
   .desktop-header.character-header .nav-link {
-    color: white;
+    color: #fff5e9;
   }
 
   .desktop-header.character-header .menu-text {
-    color: white;
+    color: #fff5e9;
   }
 
   .desktop-header.character-header .hamburger-line {
-    background-color: white;
+    background-color: #fff5e9;
   }
 
   .desktop-header.character-header .back-arrow,
   .desktop-header.character-header .back-text {
-    color: white;
+    color: #fff5e9;
   }
 
   /* Show back button on mobile for character pages */

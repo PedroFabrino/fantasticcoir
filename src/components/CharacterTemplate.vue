@@ -122,7 +122,7 @@ onMounted(() => {
   border: none;
   padding: 8px 15px;
   border-radius: 20px;
-  color: white;
+  color: #fff5e9;
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -140,7 +140,7 @@ onMounted(() => {
 }
 
 .character-title {
-  color: white;
+  color: #fff5e9;
   font-size: 2.5rem;
   margin: 60px 0 30px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -174,7 +174,7 @@ onMounted(() => {
 }
 
 .play-button {
-  background: white;
+  background: #fff5e9;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -208,14 +208,14 @@ onMounted(() => {
 }
 
 .progress-fill {
-  background: white;
+  background: #fff5e9;
   height: 100%;
   border-radius: 2px;
   transition: width 0.1s ease;
 }
 
 .time-display {
-  color: white;
+  color: #fff5e9;
   font-size: 12px;
   text-align: right;
 }
@@ -258,7 +258,7 @@ onMounted(() => {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background: white;
+  background: #fff5e9;
   border-radius: 50%;
 }
 
