@@ -25,8 +25,18 @@ const router = createRouter({
       component: () => import('../views/CharactersView.vue'),
     },
     {
-      path: '/fades',
-      name: 'fades',
+      path: '/mariposa',
+      name: 'mariposa',
+      component: () => import('../views/CharactersView.vue'),
+    },
+    {
+      path: '/primavera',
+      name: 'primavera',
+      component: () => import('../views/CharactersView.vue'),
+    },
+    {
+      path: '/fae',
+      name: 'fae',
       component: () => import('../views/CharactersView.vue'),
     },
     {

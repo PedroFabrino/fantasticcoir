@@ -10,13 +10,15 @@ const route = useRoute()
 const isHomePage = computed(() => route.path === '/')
 const isCharacterPage = computed(() => {
   const characterRoutes = [
-    'pirata-sereia',
+    'mariposa',
+    'primavera',
+    'fae',
     'princese',
-    'fades',
-    'satiro-fauno',
-    'vampiros',
-    'vampiras',
     'bruxes',
+    'vampiras',
+    'vampiros',
+    'satiro-fauno',
+    'pirata-sereia',
   ]
   return characterRoutes.includes(route.name as string)
 })
@@ -81,8 +83,18 @@ const closeDropdown = () => {
             </button>
             <ul class="dropdown-menu" :class="{ active: isDropdownOpen }">
               <li>
-                <RouterLink to="/pirata-sereia" class="dropdown-link">{{
-                  t('characters.names.pirata-sereia')
+                <RouterLink to="/mariposa" class="dropdown-link">{{
+                  t('characters.names.mariposa')
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/primavera" class="dropdown-link">{{
+                  t('characters.names.primavera')
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/fae" class="dropdown-link">{{
+                  t('characters.names.fae')
                 }}</RouterLink>
               </li>
               <li>
@@ -91,18 +103,8 @@ const closeDropdown = () => {
                 }}</RouterLink>
               </li>
               <li>
-                <RouterLink to="/fades" class="dropdown-link">{{
-                  t('characters.names.fades')
-                }}</RouterLink>
-              </li>
-              <li>
-                <RouterLink to="/satiro-fauno" class="dropdown-link">{{
-                  t('characters.names.satiro-fauno')
-                }}</RouterLink>
-              </li>
-              <li>
-                <RouterLink to="/vampiros" class="dropdown-link">{{
-                  t('characters.names.vampiros')
+                <RouterLink to="/bruxes" class="dropdown-link">{{
+                  t('characters.names.bruxes')
                 }}</RouterLink>
               </li>
               <li>
@@ -111,8 +113,18 @@ const closeDropdown = () => {
                 }}</RouterLink>
               </li>
               <li>
-                <RouterLink to="/bruxes" class="dropdown-link">{{
-                  t('characters.names.bruxes')
+                <RouterLink to="/vampiros" class="dropdown-link">{{
+                  t('characters.names.vampiros')
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/satiro-fauno" class="dropdown-link">{{
+                  t('characters.names.satiro-fauno')
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/pirata-sereia" class="dropdown-link">{{
+                  t('characters.names.pirata-sereia')
                 }}</RouterLink>
               </li>
             </ul>
@@ -180,8 +192,24 @@ const closeDropdown = () => {
         <div class="menu-separator"></div>
 
         <div class="menu-item">
-          <RouterLink to="/pirata-sereia" class="mobile-nav-link" @click="closeMobileMenu">
-            {{ t('characters.names.pirata-sereia') }}
+          <RouterLink to="/mariposa" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.mariposa') }}
+          </RouterLink>
+        </div>
+
+        <div class="menu-separator"></div>
+
+        <div class="menu-item">
+          <RouterLink to="/primavera" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.primavera') }}
+          </RouterLink>
+        </div>
+
+        <div class="menu-separator"></div>
+
+        <div class="menu-item">
+          <RouterLink to="/fae" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.fae') }}
           </RouterLink>
         </div>
 
@@ -196,24 +224,8 @@ const closeDropdown = () => {
         <div class="menu-separator"></div>
 
         <div class="menu-item">
-          <RouterLink to="/fades" class="mobile-nav-link" @click="closeMobileMenu">
-            {{ t('characters.names.fades') }}
-          </RouterLink>
-        </div>
-
-        <div class="menu-separator"></div>
-
-        <div class="menu-item">
-          <RouterLink to="/satiro-fauno" class="mobile-nav-link" @click="closeMobileMenu">
-            {{ t('characters.names.satiro-fauno') }}
-          </RouterLink>
-        </div>
-
-        <div class="menu-separator"></div>
-
-        <div class="menu-item">
-          <RouterLink to="/vampiros" class="mobile-nav-link" @click="closeMobileMenu">
-            {{ t('characters.names.vampiros') }}
+          <RouterLink to="/bruxes" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.bruxes') }}
           </RouterLink>
         </div>
 
@@ -228,8 +240,24 @@ const closeDropdown = () => {
         <div class="menu-separator"></div>
 
         <div class="menu-item">
-          <RouterLink to="/bruxes" class="mobile-nav-link" @click="closeMobileMenu">
-            {{ t('characters.names.bruxes') }}
+          <RouterLink to="/vampiros" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.vampiros') }}
+          </RouterLink>
+        </div>
+
+        <div class="menu-separator"></div>
+
+        <div class="menu-item">
+          <RouterLink to="/satiro-fauno" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.satiro-fauno') }}
+          </RouterLink>
+        </div>
+
+        <div class="menu-separator"></div>
+
+        <div class="menu-item">
+          <RouterLink to="/pirata-sereia" class="mobile-nav-link" @click="closeMobileMenu">
+            {{ t('characters.names.pirata-sereia') }}
           </RouterLink>
         </div>
 

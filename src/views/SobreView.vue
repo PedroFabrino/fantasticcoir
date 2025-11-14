@@ -5,6 +5,14 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 const contentVisible = ref(false)
 
+// SoundCloud embed configuration
+const introductionUrl = 'https://soundcloud.com/emmanuel-fernandes-360214406/1-introducao'
+
+// Convert SoundCloud URLs to embed URLs
+const getSoundCloudEmbedUrl = (url: string) => {
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`
+}
+
 onMounted(() => {
   setTimeout(() => {
     contentVisible.value = true
@@ -31,6 +39,20 @@ onUnmounted(() => {
         :alt="t('common.decorationAlt')"
         class="fancy-decoration"
       />
+    </div>
+
+    <!-- SoundCloud Player for Introduction -->
+    <div class="audio-container">
+      <iframe
+        :src="getSoundCloudEmbedUrl(introductionUrl)"
+        width="100%"
+        height="166"
+        frameborder="no"
+        scrolling="no"
+        allow="autoplay"
+        class="soundcloud-player"
+      >
+      </iframe>
     </div>
 
     <!-- Text Content Block -->
@@ -71,6 +93,23 @@ onUnmounted(() => {
   width: 100%;
   height: auto;
   z-index: 1;
+}
+
+.audio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.soundcloud-player {
+  width: 100%;
+  max-width: 500px;
+  height: 166px;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 .text-content {

@@ -20,42 +20,66 @@ onUnmounted(() => {
 // Import SVG files using Vite's explicit import syntax
 import pirataSereiaSvg from '@/assets/pirata e sereia.svg'
 import princeseSvg from '@/assets/princese.svg'
-import fadesSvg from '@/assets/fades.svg'
+import faesSvg from '@/assets/fae.svg'
+import mariposaSvg from '@/assets/mariposa.svg'
+import primaveraSvg from '@/assets/primavera.svg'
 import satiroFaunoSvg from '@/assets/sátiro e fauno.svg'
 import vampirosSvg from '@/assets/vampiros.svg'
 import vampirasSvg from '@/assets/vampiras.svg'
 import bruxesSvg from '@/assets/bruxes.svg'
 
-// Character data configuration
+// Character data configuration (ordered by index numbers 2-10)
 const characterData = {
-  'pirata-sereia': {
-    svgSrc: pirataSereiaSvg,
-    audioSrc: '/audio/pirata-sereia-theme.mp3',
+  // 2. Fadas Mariposa
+  mariposa: {
+    svgSrc: mariposaSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/2-fadas-mariposammanu',
   },
+  // 3. Fadas Primavera
+  primavera: {
+    svgSrc: primaveraSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/3-fadas-primavera',
+  },
+  // 4. Fadas Fae
+  fae: {
+    svgSrc: faesSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/4-fadas-fae',
+  },
+  // 5. Princese
   princese: {
     svgSrc: princeseSvg,
-    audioSrc: '/audio/princesas-theme.mp3',
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/5-princese',
   },
-  fades: {
-    svgSrc: fadesSvg,
-    audioSrc: '/audio/fadas-theme.mp3',
-  },
-  'satiro-fauno': {
-    svgSrc: satiroFaunoSvg,
-    audioSrc: '/audio/satiro-fauno-theme.mp3',
-  },
-  vampiros: {
-    svgSrc: vampirosSvg,
-    audioSrc: '/audio/vampiros-theme.mp3',
-  },
-  vampiras: {
-    svgSrc: vampirasSvg,
-    audioSrc: '/audio/vampiras-theme.mp3',
-  },
+  // 6. Bruxe
   bruxes: {
     svgSrc: bruxesSvg,
-    audioSrc: '/audio/bruxas-theme.mp3',
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/6-bruxe',
   },
+  // 7. Mallicar e Dalia (Vampira)
+  vampiras: {
+    svgSrc: vampirasSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/7-mallicar-e-dalia',
+  },
+  // 8. Os Vampiros
+  vampiros: {
+    svgSrc: vampirosSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/8-os-vampiros',
+  },
+  // 9. O Fauno e o Sátiro
+  'satiro-fauno': {
+    svgSrc: satiroFaunoSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/9-o-fauno-e-o-satiro',
+  },
+  // 10. A Pirata e a Sereia
+  'pirata-sereia': {
+    svgSrc: pirataSereiaSvg,
+    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/10-a-pirata-e-a-sereia',
+  },
+}
+
+// Convert SoundCloud URLs to embed URLs
+const getSoundCloudEmbedUrl = (url: string) => {
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`
 }
 
 // Get current character based on route
@@ -76,11 +100,18 @@ const currentCharacter = computed(() => {
       />
     </div>
 
-    <!-- Audio Player -->
+    <!-- SoundCloud Player -->
     <div class="audio-container">
-      <audio controls :src="currentCharacter.audioSrc" class="character-audio">
-        {{ t('common.audioNotSupported') }}
-      </audio>
+      <iframe
+        :src="getSoundCloudEmbedUrl(currentCharacter.soundcloudUrl)"
+        width="100%"
+        height="166"
+        frameborder="no"
+        scrolling="no"
+        allow="autoplay"
+        class="soundcloud-player"
+      >
+      </iframe>
     </div>
 
     <!-- Text Content -->
@@ -124,10 +155,12 @@ const currentCharacter = computed(() => {
   margin-top: 2rem;
 }
 
-.character-audio {
+.soundcloud-player {
   width: 100%;
-  max-width: 400px;
-  height: 50px;
+  max-width: 500px;
+  height: 166px;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 .text-container {
