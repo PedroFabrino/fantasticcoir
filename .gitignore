@@ -28,6 +28,9 @@ coverage
 
 .eslintcache
 
+# Generated QR codes
+qr-codes/
+
 # Cypress
 /cypress/videos/
 /cypress/screenshots/

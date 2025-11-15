@@ -36,6 +36,22 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Generate QR codes
+        run: npm run qr:generate
+
+      - name: Create QR codes archive
+        run: |
+          cd qr-codes
+          zip -r ../fantastico-cuir-qr-codes.zip *.png
+          cd ..
+
+      - name: Upload QR codes as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fantastico-cuir-qr-codes
+          path: fantastico-cuir-qr-codes.zip
+          retention-days: 30
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
