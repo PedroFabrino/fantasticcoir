@@ -9,7 +9,7 @@ interface Props {
   textContent: string
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 const isPlaying = ref(false)
 const currentTime = ref(0)
 const duration = ref(0)
@@ -91,7 +91,7 @@ onMounted(() => {
 
     <!-- Text Content -->
     <div class="text-content">
-      <p v-html="textContent"></p>
+      <div class="rich-text" v-html="textContent"></div>
     </div>
 
     <!-- Character Icon at Bottom -->
@@ -231,8 +231,14 @@ onMounted(() => {
   text-align: justify;
 }
 
-.text-content p {
-  margin: 0;
+/* Ensure injected HTML via v-html gets proper spacing */
+.text-content :deep(p) {
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+}
+
+.text-content :deep(p + p) {
+  margin-top: 0.5rem;
 }
 
 .bottom-icon {

@@ -21,54 +21,46 @@ onMounted(() => {
         <div class="logo-container">
           <img src="@/assets/fancy_logo.svg" alt="Fantastic Coir Event Logo" class="main-logo" />
         </div>
-
-        <!-- Exhibition Title -->
-        <div class="exhibition-section">
-          <div class="exhibition-decorations">
-            <img
-              src="@/assets/fancy1.svg"
-              alt="Fantastic Coir Event Logo"
-              class="decoration-left"
-            />
-            <h2 class="exhibition-title">{{ $t('home.exhibition') }}</h2>
-            <img
-              src="@/assets/fancy1.svg"
-              alt="Fantastic Coir Event Logo"
-              class="decoration-right"
-            />
-          </div>
-
-          <!-- Event Details -->
-          <div class="mobile-event-details">
-            <ul class="event-locations-list">
-              <li class="event-location">
-                <h3>{{ $t('home.event1_name') }}</h3>
-                <p class="event-dates">{{ $t('home.event1_dates') }}</p>
-              </li>
-
-              <li class="event-location">
-                <h3>{{ $t('home.event2_name') }}</h3>
-                <p class="event-dates">{{ $t('home.event2_dates') }}</p>
-              </li>
-            </ul>
-          </div>
-          <img
-            src="@/assets/fancy2.svg"
-            :alt="t('common.logoAlt')"
-            class="fancy-bottom desktop-fancy"
-          />
-        </div>
       </div>
+    </section>
+
+    <!-- Exhibition Section (outside hero) -->
+    <section class="exhibition-section">
+      <div class="exhibition-decorations">
+        <img src="@/assets/fancy1.svg" alt="Fantastic Coir Event Logo" class="decoration-left" />
+        <h2 class="exhibition-title">{{ $t('home.exhibition') }}</h2>
+        <img src="@/assets/fancy1.svg" alt="Fantastic Coir Event Logo" class="decoration-right" />
+      </div>
+
+      <!-- Event Details -->
+      <div class="mobile-event-details">
+        <ul class="event-locations-list">
+          <li class="event-location">
+            <h3>{{ $t('home.event1_name') }}</h3>
+            <p class="event-dates">{{ $t('home.event1_dates') }}</p>
+          </li>
+
+          <li class="event-location">
+            <h3>{{ $t('home.event2_name') }}</h3>
+            <p class="event-dates">{{ $t('home.event2_dates') }}</p>
+          </li>
+        </ul>
+      </div>
+      <!-- <img
+        src="@/assets/fancy2.svg"
+        :alt="t('common.logoAlt')"
+        class="fancy-bottom desktop-fancy"
+      /> -->
     </section>
   </div>
 </template>
-
 <style scoped>
 .home-view {
   background: #fff5e9;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  padding-top: 60px; /* Space for fixed header */
+  min-height: calc(100vh - 60px); /* Ensure full height */
 }
 
 .hero-section {
@@ -77,6 +69,7 @@ onMounted(() => {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  flex: 1; /* Take available space */
   padding-top: 2rem;
 }
 
@@ -88,7 +81,6 @@ onMounted(() => {
 .hero-content {
   text-align: center;
   max-width: 637px;
-  max-height: 700px;
   width: 100%;
 }
 

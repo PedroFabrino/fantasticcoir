@@ -9,6 +9,7 @@ import AppFooter from './components/AppFooter.vue'
     <main class="main-content">
       <RouterView />
     </main>
+    <AppFooter />
   </div>
 </template>
 
@@ -34,7 +35,6 @@ body {
 
 .main-content {
   flex: 1;
-  margin-top: 60px;
 }
 
 /* Fantasy theme colors */

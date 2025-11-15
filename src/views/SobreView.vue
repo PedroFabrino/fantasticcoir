@@ -79,6 +79,7 @@ onUnmounted(() => {
 }
 
 .logo-container {
+  margin-top: 4rem;
   text-align: center;
   position: relative;
   margin-bottom: 2rem;
@@ -139,11 +140,12 @@ onUnmounted(() => {
   max-width: 600px;
   width: 100%;
   color: #333;
-  line-height: 1.8;
+  line-height: 2;
   margin-top: 5rem;
 }
 
-.text-content h2 {
+/* Because the content is injected with v-html, use :deep to style its children */
+.text-content :deep(h2) {
   font-family: 'Times New Roman', serif;
   font-size: 2rem;
   color: #e91e63;
@@ -152,18 +154,23 @@ onUnmounted(() => {
   font-style: italic;
 }
 
-.text-content p {
+.text-content :deep(p) {
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
   text-align: justify;
+  line-height: 1.8;
+  margin: 0 0 1rem 0; /* add vertical spacing between paragraphs */
 }
 
-.text-content strong {
+.text-content :deep(p + p) {
+  margin-top: 0.5rem; /* extra breathing room between consecutive paragraphs */
+}
+
+.text-content :deep(strong) {
   color: #e91e63;
   font-weight: bold;
 }
 
-.text-content em {
+.text-content :deep(em) {
   color: #ff6b35;
   font-style: italic;
 }

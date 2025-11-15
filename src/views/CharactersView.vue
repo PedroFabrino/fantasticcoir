@@ -145,7 +145,7 @@ const currentCharacter = computed(() => {
 }
 
 .svg-container {
-  /* max-width: 400px; */
+  margin-top: 4rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -212,22 +212,22 @@ const currentCharacter = computed(() => {
   line-height: 1.8;
 }
 
-.character-text p {
+.character-text :deep(p) {
   font-size: 1.1rem;
   color: #fff5e9;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.25rem auto; /* bottom spacing and centered */
   text-align: justify;
   max-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.character-text strong {
+.character-text :deep(strong) {
   color: #ffeb3b;
   font-weight: bold;
 }
 
-.character-text em {
+.character-text :deep(em) {
   color: #ff9800;
   font-style: italic;
 }
@@ -272,7 +272,7 @@ const currentCharacter = computed(() => {
     padding: 1.5rem;
   }
 
-  .character-text p {
+  .character-text :deep(p) {
     font-size: 1rem;
     text-align: left;
   }
