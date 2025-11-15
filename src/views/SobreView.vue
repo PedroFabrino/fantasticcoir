@@ -6,11 +6,11 @@ const { t } = useI18n()
 const contentVisible = ref(false)
 
 // SoundCloud embed configuration
-const introductionUrl = 'https://soundcloud.com/emmanuel-fernandes-360214406/1-introducao'
+const introductionUrl = 'https://soundcloud.com/fantastico-cuir/1-introducao'
 
 // Convert SoundCloud URLs to embed URLs
 const getSoundCloudEmbedUrl = (url: string) => {
-  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true&buying=false&sharing=false&download=false&show_artwork=true&show_bpm=false&show_playcount=false`
 }
 
 onMounted(() => {
@@ -42,15 +42,19 @@ onUnmounted(() => {
     </div>
 
     <!-- SoundCloud Player for Introduction -->
-    <div class="audio-container">
+    <div class="audio-container" role="region" aria-label="Reprodutor de áudio de introdução">
+      <h2 class="sr-only">Áudio de Introdução</h2>
       <iframe
         :src="getSoundCloudEmbedUrl(introductionUrl)"
+        title="Reprodutor SoundCloud para introdução"
         width="100%"
         height="166"
         frameborder="no"
         scrolling="no"
-        allow="autoplay"
         class="soundcloud-player"
+        tabindex="0"
+        role="application"
+        aria-label="Reprodutor de áudio: Introdução ao Fantástico Cuir"
       >
       </iframe>
     </div>
@@ -110,6 +114,25 @@ onUnmounted(() => {
   height: 166px;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+/* Accessibility styles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Improve focus visibility for the iframe */
+.soundcloud-player:focus {
+  outline: 3px solid #ff5500;
+  outline-offset: 3px;
 }
 
 .text-content {
@@ -179,6 +202,24 @@ onUnmounted(() => {
     font-size: 1rem;
     text-align: left;
   }
+
+  /* Mobile accessibility improvements - elementos ocultos não precisam de estilos visuais */
+  .audio-container {
+    margin: 1.5rem 0;
+    max-width: 100%;
+  }
+
+  .soundcloud-player {
+    height: 166px;
+    min-height: 166px;
+    width: 100%;
+  }
+
+  /* Better focus indicators on mobile */
+  .soundcloud-player:focus {
+    outline: 4px solid #ff5500;
+    outline-offset: 4px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -200,6 +241,11 @@ onUnmounted(() => {
 
   .text-content p {
     font-size: 0.95rem;
+  }
+
+  /* Enhanced mobile accessibility - elementos ocultos não precisam de estilos visuais */
+  .audio-container {
+    margin: 1rem 0;
   }
 }
 </style>

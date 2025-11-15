@@ -33,54 +33,57 @@ const characterData = {
   // 2. Fadas Mariposa
   mariposa: {
     svgSrc: mariposaSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/2-fadas-mariposammanu',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/2-fadas-mariposammanu',
   },
   // 3. Fadas Primavera
   primavera: {
     svgSrc: primaveraSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/3-fadas-primavera',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/3-fadas-primavera',
   },
   // 4. Fadas Fae
   fae: {
     svgSrc: faesSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/4-fadas-fae',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/4-fadas-fae',
   },
   // 5. Princese
   princese: {
     svgSrc: princeseSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/5-princese',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/5-princese',
   },
   // 6. Bruxe
   bruxes: {
     svgSrc: bruxesSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/6-bruxe',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/6-bruxe',
   },
   // 7. Mallicar e Dalia (Vampira)
   vampiras: {
     svgSrc: vampirasSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/7-mallicar-e-dalia',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/7-mallicar-e-dalia',
   },
   // 8. Os Vampiros
   vampiros: {
     svgSrc: vampirosSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/8-os-vampiros',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/8-os-vampiros',
   },
   // 9. O Fauno e o Sátiro
   'satiro-fauno': {
     svgSrc: satiroFaunoSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/9-o-fauno-e-o-satiro',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/9-o-fauno-e-o-satiro',
   },
   // 10. A Pirata e a Sereia
   'pirata-sereia': {
     svgSrc: pirataSereiaSvg,
-    soundcloudUrl: 'https://soundcloud.com/emmanuel-fernandes-360214406/10-a-pirata-e-a-sereia',
+    soundcloudUrl: 'https://soundcloud.com/fantastico-cuir/10-a-pirata-e-a-sereia',
   },
 }
 
 // Convert SoundCloud URLs to embed URLs
 const getSoundCloudEmbedUrl = (url: string) => {
-  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true&buying=false&sharing=false&download=false&show_artwork=true&show_bpm=false&show_playcount=false`
 }
+
+// Computed property that forces re-rendering when route or query changes
+const embedUrl = computed(() => getSoundCloudEmbedUrl(currentCharacter.value.soundcloudUrl))
 
 // Get current character based on route
 const currentCharacter = computed(() => {
@@ -101,15 +104,23 @@ const currentCharacter = computed(() => {
     </div>
 
     <!-- SoundCloud Player -->
-    <div class="audio-container">
+    <div
+      class="audio-container"
+      role="region"
+      :aria-label="`Reprodutor de áudio para ${t(`characters.names.${String(route.name)}`)}`"
+    >
+      <h2 class="sr-only">Áudio do Personagem</h2>
       <iframe
-        :src="getSoundCloudEmbedUrl(currentCharacter.soundcloudUrl)"
+        :src="embedUrl"
+        :title="`Reprodutor SoundCloud para ${t(`characters.names.${String(route.name)}`)}`"
         width="100%"
         height="166"
         frameborder="no"
         scrolling="no"
-        allow="autoplay"
         class="soundcloud-player"
+        tabindex="0"
+        role="application"
+        :aria-label="`Reprodutor de áudio: ${t(`characters.names.${String(route.name)}`)}`"
       >
       </iframe>
     </div>
@@ -161,6 +172,25 @@ const currentCharacter = computed(() => {
   height: 166px;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+/* Accessibility styles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Improve focus visibility for the iframe */
+.soundcloud-player:focus {
+  outline: 3px solid #ff5500;
+  outline-offset: 3px;
 }
 
 .text-container {
@@ -246,6 +276,24 @@ const currentCharacter = computed(() => {
     font-size: 1rem;
     text-align: left;
   }
+
+  /* Mobile accessibility improvements - elementos ocultos não precisam de estilos visuais */
+  .audio-container {
+    margin: 1.5rem 0;
+    max-width: 100%;
+  }
+
+  .soundcloud-player {
+    height: 166px;
+    min-height: 166px;
+    width: 100%;
+  }
+
+  /* Better focus indicators on mobile */
+  .soundcloud-player:focus {
+    outline: 4px solid #ff5500;
+    outline-offset: 4px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -263,6 +311,11 @@ const currentCharacter = computed(() => {
 
   .svg-container {
     max-width: 300px;
+  }
+
+  /* Enhanced mobile accessibility for small screens - elementos ocultos */
+  .audio-container {
+    margin: 1rem 0;
   }
 }
 </style>

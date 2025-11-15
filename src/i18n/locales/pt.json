@@ -48,5 +48,18 @@
     "audioNotSupported": "Seu navegador não suporta o elemento de áudio.",
     "logoAlt": "Logo Fantástico Cuir",
     "decorationAlt": "Elemento Decorativo"
+  },
+  "accessibility": {
+    "audioRegion": "Reprodutor de áudio para",
+    "audioRegionIntro": "Reprodutor de áudio de introdução",
+    "audioTitle": "Áudio do Personagem",
+    "audioTitleIntro": "Áudio de Introdução",
+    "audioInstructions": "Use as teclas Tab para navegar até o reprodutor de áudio e Enter ou Espaço para reproduzir. O reprodutor contém controles para pausar, avançar e controlar o volume.",
+    "audioPlayer": "Reprodutor de áudio:",
+    "audioPlayerSoundCloud": "Reprodutor SoundCloud para",
+    "audioPlayerIntro": "Reprodutor SoundCloud para introdução",
+    "audioFallback": "Se você não conseguir usar o reprodutor acima,",
+    "audioDirectLink": "acesse diretamente no SoundCloud",
+    "fantasticoCuirIntro": "Introdução ao Fantástico Cuir"
   }
 }
