@@ -215,11 +215,16 @@ const currentCharacter = computed(() => {
 .character-text :deep(p) {
   font-size: 1.1rem;
   color: #fff5e9;
-  margin: 0 auto 1.25rem auto; /* bottom spacing and centered */
-  text-align: justify;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1.5rem auto;
+  text-align: left;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-indent: 2rem;
+  max-width: 80%;
+}
+
+.character-text :deep(p:has(strong:only-child)) {
+  text-indent: 0;
 }
 
 .character-text :deep(strong) {
@@ -275,6 +280,7 @@ const currentCharacter = computed(() => {
   .character-text :deep(p) {
     font-size: 1rem;
     text-align: left;
+    max-width: 100%;
   }
 
   /* Mobile accessibility improvements - elementos ocultos não precisam de estilos visuais */
