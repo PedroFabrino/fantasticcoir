@@ -8,10 +8,16 @@
   "home": {
     "title": "Fantástico Cuir",
     "exhibition": "Exposição em Cartaz",
-    "event1_name": "Espaço Renato Russo",
-    "event1_dates": "15/11 à 15/12/2025",
-    "event2_name": "Casa do Cantador",
-    "event2_dates": "01/04 à 26/04/2026"
+    "event1_name": "Espaço Cultural Renato Russo",
+    "event1_subtitle": "Galeria Aquário (piso superior)",
+    "event1_dates": "15/11/2025 à 15/01/2026 (prolongado)",
+    "event1_map": "https://www.google.com/maps/search/?api=1&query=Espaço+Cultural+Renato+Russo+Brasília",
+    "event2_name": "Galeria Olho de Águia",
+    "event2_dates": "25/01 à 27/02 de 2026",
+    "event2_map": "https://www.google.com/maps/search/?api=1&query=Galeria+Olho+de+Águia+Taguatinga+DF",
+    "event3_name": "Casa do Cantador",
+    "event3_dates": "04/03 à 04/04 de 2026",
+    "event3_map": "https://www.google.com/maps/search/?api=1&query=Casa+do+Cantador+Ceilândia+DF"
   },
   "about": {
     "title": "Sobre Nós",

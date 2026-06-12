@@ -36,13 +36,25 @@ onMounted(() => {
       <div class="mobile-event-details">
         <ul class="event-locations-list">
           <li class="event-location">
-            <h3>{{ $t('home.event1_name') }}</h3>
+            <a :href="$t('home.event1_map')" target="_blank" rel="noopener noreferrer" class="map-link">
+              <h3>{{ $t('home.event1_name') }} 📍</h3>
+            </a>
+            <p class="event-subtitle">{{ $t('home.event1_subtitle') }}</p>
             <p class="event-dates">{{ $t('home.event1_dates') }}</p>
           </li>
 
           <li class="event-location">
-            <h3>{{ $t('home.event2_name') }}</h3>
+            <a :href="$t('home.event2_map')" target="_blank" rel="noopener noreferrer" class="map-link">
+              <h3>{{ $t('home.event2_name') }} 📍</h3>
+            </a>
             <p class="event-dates">{{ $t('home.event2_dates') }}</p>
+          </li>
+
+          <li class="event-location">
+            <a :href="$t('home.event3_map')" target="_blank" rel="noopener noreferrer" class="map-link">
+              <h3>{{ $t('home.event3_name') }} 📍</h3>
+            </a>
+            <p class="event-dates">{{ $t('home.event3_dates') }}</p>
           </li>
         </ul>
       </div>
@@ -152,6 +164,22 @@ onMounted(() => {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.map-link {
+  text-decoration: none;
+}
+
+.map-link:hover h3 {
+  text-decoration: underline;
+}
+
+.event-subtitle {
+  color: #ea5279;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 0.2rem 0;
   line-height: 1.2;
 }
 
@@ -280,6 +308,11 @@ onMounted(() => {
     text-align: left;
   }
 
+  .event-subtitle {
+    color: #fff5e9;
+    text-align: left;
+  }
+
   .event-dates {
     color: #fff5e9;
     text-align: left;
@@ -348,6 +381,11 @@ onMounted(() => {
 
   .event-location h3 {
     font-size: 1rem;
+    color: #fff5e9;
+  }
+
+  .event-subtitle {
+    font-size: 0.9rem;
     color: #fff5e9;
   }
 
