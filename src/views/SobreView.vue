@@ -156,13 +156,19 @@ onUnmounted(() => {
 
 .text-content :deep(p) {
   font-size: 1.1rem;
-  text-align: justify;
+  text-align: left;
   line-height: 1.8;
-  margin: 0 0 1rem 0; /* add vertical spacing between paragraphs */
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.3px;
+  text-indent: 2rem;
+}
+
+.text-content :deep(p:has(strong:only-child)) {
+  text-indent: 0;
 }
 
 .text-content :deep(p + p) {
-  margin-top: 0.5rem; /* extra breathing room between consecutive paragraphs */
+  margin-top: 0;
 }
 
 .text-content :deep(strong) {

@@ -228,17 +228,23 @@ onMounted(() => {
   color: #333;
   line-height: 1.6;
   font-size: 14px;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Ensure injected HTML via v-html gets proper spacing */
 .text-content :deep(p) {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
   line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-indent: 2rem;
+}
+
+.text-content :deep(p:has(strong:only-child)) {
+  text-indent: 0;
 }
 
 .text-content :deep(p + p) {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
 .bottom-icon {
