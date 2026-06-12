@@ -1,0 +1,48 @@
+name: Generate QR Codes Only
+
+on:
+  workflow_dispatch: # Manual trigger only
+    inputs:
+      base_url:
+        description: 'Base URL for QR codes (optional - uses default if empty)'
+        required: false
+        type: string
+
+jobs:
+  generate-qr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update base URL if provided
+        if: ${{ github.event.inputs.base_url != '' }}
+        run: |
+          sed -i "s|const BASE_URL = '.*';|const BASE_URL = '${{ github.event.inputs.base_url }}';|" scripts/generate-qr-codes.js
+
+      - name: Generate QR codes
+        run: npm run qr:generate
+
+      - name: Create QR codes archive
+        run: |
+          cd qr-codes
+          zip -r ../fantastico-cuir-qr-codes.zip *.png
+          cd ..
+          ls -la fantastico-cuir-qr-codes.zip
+
+      - name: Upload QR codes as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fantastico-cuir-qr-codes-manual
+          path: fantastico-cuir-qr-codes.zip
+          retention-days: 90
