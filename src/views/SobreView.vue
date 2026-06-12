@@ -80,17 +80,22 @@ onUnmounted(() => {
 
 .logo-container {
   margin-top: 4rem;
-  text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
   margin-bottom: 2rem;
 }
 
 .main-logo {
   position: relative;
   width: 100%;
-  margin-bottom: -100px;
+  margin-bottom: -15%;
   z-index: 10;
   height: auto;
+  object-fit: contain;
 }
 
 .fancy-decoration {
@@ -98,6 +103,7 @@ onUnmounted(() => {
   width: 100%;
   height: auto;
   z-index: 1;
+  object-fit: contain;
 }
 
 .audio-container {
@@ -193,14 +199,6 @@ onUnmounted(() => {
     box-sizing: border-box;
   }
 
-  .main-logo {
-    max-width: 250px;
-  }
-
-  .fancy-decoration {
-    max-width: 120px;
-  }
-
   .text-content h2 {
     font-size: 1.6rem;
   }
@@ -232,14 +230,6 @@ onUnmounted(() => {
 @media (max-width: 480px) {
   .sobre-view {
     padding: 1rem;
-  }
-
-  .main-logo {
-    max-width: 200px;
-  }
-
-  .fancy-decoration {
-    max-width: 100px;
   }
 
   .text-content h2 {
